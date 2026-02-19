@@ -1,4 +1,5 @@
 import "./style/App.css";
+import Overview from "./overview";
 
 export default function App() {
   return (
@@ -20,12 +21,7 @@ export default function App() {
 
       {/* Sections */}
       <main className="w-full">
-
-        <section id="overview" className="scroll-mt-24 py-20">
-          <div className="mx-auto max-w-6xl px-6">
-            <h1 className="text-4xl font-bold">Hero goes here</h1>
-          </div>
-        </section>
+        <Overview />
 
         <section id="journey" className="scroll-mt-24 py-20">
           <div className="mx-auto max-w-6xl px-6">

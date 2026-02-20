@@ -2,6 +2,9 @@ import "./style/App.css";
 import Overview from "./overview";
 import Navbar from "./Navbar";
 import Journey from "./Journey";
+import Stack from "./Stack";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 export default function App() {
   return (
@@ -15,25 +18,11 @@ export default function App() {
 
         <Journey />
 
-        <section id="stack" className="scroll-mt-24 py-20">
-          <div className="mx-auto max-w-6xl px-6">
-            <h2 className="text-2xl font-semibold">Technical Stack</h2>
-          </div>
-        </section>
+        <Projects />
 
-        <section id="projects" className="scroll-mt-24 py-20">
-          <div className="mx-auto max-w-6xl px-6">
-            <h2 className="text-2xl font-semibold">Projects</h2>
-          </div>
-        </section>
+        <Stack />
 
-        <section id="contact" className="scroll-mt-24 py-20">
-          <div className="mx-auto max-w-6xl px-6">
-            <h2 className="text-2xl font-semibold">
-              Let’s solve something extraordinary
-            </h2>
-          </div>
-        </section>
+        <Contact />
 
       </main>
     </div>

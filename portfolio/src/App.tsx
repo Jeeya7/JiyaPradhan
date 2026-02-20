@@ -1,10 +1,10 @@
 import "./style/App.css";
-import Overview from "./overview";
-import Navbar from "./Navbar";
-import Journey from "./Journey";
-import Stack from "./Stack";
-import Projects from "./Projects";
-import Contact from "./Contact";
+import Overview from "./sections/overview";
+import Navbar from "./sections/Navbar";
+import Journey from "./sections/Journey";
+import Stack from "./sections/Stack";
+import Projects from "./sections/Projects";
+import Contact from "./sections/Contact";
 
 export default function App() {
   return (

@@ -12,19 +12,14 @@ export default function App() {
       
       <Navbar />
 
-      {/* Sections */}
       <main className="w-full">
         <Overview />
-
         <Journey />
-
         <Projects />
-
         <Stack />
-
         <Contact />
-
       </main>
+      
     </div>
   );
 }

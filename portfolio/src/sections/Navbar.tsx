@@ -2,7 +2,7 @@ import { Diamond } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 bg-black/50 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.25)]">
+    <header className="fixed inset-x-0 top-0 z-50 bg-black/70 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.25)]">
       <nav className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between text-white">
         <div className="font-semibold flex items-center gap-2">
           <Diamond className="text-white-500" />

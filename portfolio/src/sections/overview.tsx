@@ -3,7 +3,7 @@ export default function Overview() {
     <section id="overview" className="relative overflow-hidden scroll-mt-24 border-b border-white/10">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_40%,rgba(236,72,153,0.35),transparent_45%),linear-gradient(110deg,#111827_0%,#1f2937_45%,#581c87_100%)]" />
 
-      <div className="relative mx-auto grid min-h-[80vh] max-w-7xl gap-14 px-6 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+      <div className="relative mx-auto grid min-h-[80vh] max-w-7xl gap-14 px-6 pb-16 pt-28 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div className="space-y-8 text-white">
           <span className="inline-flex rounded-full border border-white/10 bg-black/40 px-5 py-2 text-sm font-semibold">
             Available for Internships 2026

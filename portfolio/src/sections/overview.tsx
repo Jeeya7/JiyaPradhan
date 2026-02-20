@@ -42,7 +42,7 @@ export default function Overview() {
         <div className="relative mx-auto h-[420px] w-full max-w-[560px]">
           <div className="absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-pink-200/90 shadow-[0_0_120px_rgba(244,114,182,0.45)]" />
           <div className="absolute left-1/2 top-1/2 flex h-[290px] w-[290px] -translate-x-1/2 -translate-y-[44%] items-center justify-center rounded-full border border-white/20 bg-[linear-gradient(180deg,#312e81,#111827)] text-7xl font-semibold text-white">
-            JP
+            <img src="/JiyaPradhan.png" alt="Jiya Pradhan" className="h-full rounded-full object-cover" />
           </div>
 
           <div className="absolute right-2 top-8 rounded-2xl bg-white px-5 py-4 text-zinc-900 shadow-xl">

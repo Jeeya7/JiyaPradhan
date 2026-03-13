@@ -3,10 +3,10 @@ export default function Overview() {
     const element = document.getElementById(id);
     if (!element) return;
 
-    const NAV_HEIGHT = 72;
+    const navHeight = window.innerWidth < 1024 ? 112 : 72;
 
     const y =
-      element.getBoundingClientRect().top + window.scrollY - NAV_HEIGHT - 16;
+      element.getBoundingClientRect().top + window.scrollY - navHeight - 16;
 
     window.scrollTo({
       top: y,
@@ -17,7 +17,7 @@ export default function Overview() {
   return (
     <section
       id="overview"
-      className="relative overflow-hidden scroll-mt-24 border-b border-white/10 bg-[#0b0710]"
+      className="relative overflow-hidden scroll-mt-36 lg:scroll-mt-24 border-b border-white/10 bg-[#0b0710]"
     >
       {/* HOT PINK GLOW */}
       <div className="pointer-events-none absolute left-[72%] top-[42%] -z-10 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ff2aa3] opacity-45 blur-[120px] sm:h-[720px] sm:w-[720px] sm:opacity-50 sm:blur-[160px] lg:h-[1200px] lg:w-[1200px] lg:opacity-60 lg:blur-[260px]" />

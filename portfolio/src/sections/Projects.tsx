@@ -4,36 +4,36 @@ const projects = [
     description:
       "An interactive ML visualization tool that trains and visualizes custom decision trees, displaying information gain, split logic, and model performance metrics through a full-stack architecture.",
     tech: ["React", "TypeScript", "FastAPI", "Python", "Scikit-Learn", "Render"],
-    github: "#",
-    demo: "#",
-    highlight: null,
+    github: "https://github.com/Jeeya7/Model-Explanation-Dashboard",
+    demo:"https://jeeya7.github.io/Model-Explanation-Dashboard/",
+    demoLabel: "Website",
   },
   {
     title: "Spend-Aware",
     description:
       "A full-stack budgeting application that categorizes expenses using a custom Naive Bayes microservice and presents financial insights through intuitive data visualizations.",
     tech: ["React", "FastAPI", "Python", "PostgreSQL", "Naive Bayes"],
-    github: "#",
-    demo: "#",
-    highlight: null,
+    github: "https://github.com/Jeeya7/Spend-Aware",
+    demo: null,
+    demoLabel: null,
   },
   {
-    title: "Psych2Learn (BeaverHacks Winner)",
+    title: "Psych2Learn (🏆 BeaverHacks Winner)",
     description:
       "An AI-powered educational game that generates real-time questions using the Gemini API, with gamified scoring, health points, and adaptive feedback across single-player and multiplayer modes.",
     tech: ["Gemini API", "Python", "Flask", "JavaScript", "Prompt Engineering"],
-    github: "#",
-    demo: "#",
-    highlight: "🏆 BeaverHacks Winner",
+    github: "https://github.com/nansikom/educationgame-",
+    demo: "https://devpost.com/software/elearn-6mbn10",
+    demoLabel: "Demo",
   },
   {
     title: "Personal Portfolio Website",
     description:
       "A custom-designed AI-focused portfolio built from scratch using React and Tailwind, showcasing projects, technical growth, and interactive UI experiments.",
     tech: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    github: "#",
-    demo: "#",
-    highlight: null,
+    github: "https://github.com/Jeeya7/JiyaPradhan",
+    demo: null,
+    demoLabel: null,
   },
 ];
 
@@ -83,19 +83,24 @@ export default function Projects() {
               {/* Links */}
               <div className="flex gap-4 text-sm">
                 <a
-                  href={project.github}
+                  href={project.github} 
                   className="text-[#ec4899] hover:opacity-70"
                 >
-                  GitHub
+                  GitHub ↗
                 </a>
-                <a
-                  href={project.demo}
-                  className="text-[#ec4899] hover:opacity-70"
-                >
-                  Live Demo
-                </a>
-              </div>
-            </div>
+
+                {project.demo && (
+                  <a
+                    href={project.demo} 
+                    className="text-[#ec4899] hover:opacity-70"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >       
+                    {project.demoLabel} ↗
+                  </a>
+                )}  
+              </div>            
+          </div>
           ))}
         </div>
 

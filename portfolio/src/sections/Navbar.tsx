@@ -38,7 +38,9 @@ export default function Navbar() {
 
     const setBestVisibleSection = () => {
       if (!visibleRatios.size) return;
-      const [bestId] = [...visibleRatios.entries()].sort((a, b) => b[1] - a[1])[0];
+      const [bestId] = [...visibleRatios.entries()].sort(
+        (a, b) => b[1] - a[1]
+      )[0];
       setActiveSection(bestId);
     };
 
@@ -47,7 +49,9 @@ export default function Navbar() {
       let closestDistance = Number.POSITIVE_INFINITY;
 
       for (const section of sections) {
-        const distance = Math.abs(section.getBoundingClientRect().top - (NAV_HEIGHT + 16));
+        const distance = Math.abs(
+          section.getBoundingClientRect().top - (NAV_HEIGHT + 16)
+        );
         if (distance < closestDistance) {
           closestDistance = distance;
           closestId = section.id;
@@ -97,25 +101,28 @@ export default function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/70 shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-xl">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 text-white">
-        <div className="flex items-center gap-2 font-semibold">
-          <Diamond />
-          <div className="font-['Playfair_Display'] text-lg uppercase tracking-[0.08em]">
+      <nav className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 text-white sm:px-6 sm:py-4 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <div className="flex items-center justify-center gap-2 lg:justify-start">
+          <Diamond className="h-4 w-4 sm:h-5 sm:w-5" />
+          <div className="font-['Playfair_Display'] text-sm uppercase tracking-[0.08em] sm:text-base lg:text-lg">
             JIYA PRADHAN
           </div>
         </div>
 
-        <div className="flex gap-6 text-sm">
+        <div className="-mx-1 flex items-center gap-1 overflow-x-auto whitespace-nowrap px-1 text-xs scrollbar-none sm:gap-2 sm:text-sm lg:mx-0 lg:justify-end lg:overflow-visible lg:px-0">
           {NAV_ITEMS.map((item) => {
             const isActive = activeSection === item.id;
+
             return (
               <button
                 key={item.id}
                 type="button"
                 onClick={() => scrollToSection(item.id)}
                 aria-current={isActive ? "page" : undefined}
-                className={`transition-colors hover:text-pink-400 ${
-                  isActive ? "text-pink-400" : "text-white/90"
+                className={`rounded-full px-3 py-1.5 transition-colors sm:px-4 sm:py-2 ${
+                  isActive
+                    ? "bg-white/10 text-pink-400"
+                    : "text-white/85 hover:text-pink-400"
                 }`}
               >
                 {item.label}

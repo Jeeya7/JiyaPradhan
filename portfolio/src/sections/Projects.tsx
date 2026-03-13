@@ -5,7 +5,7 @@ const projects = [
       "An interactive ML visualization tool that trains and visualizes custom decision trees, displaying information gain, split logic, and model performance metrics through a full-stack architecture.",
     tech: ["React", "TypeScript", "FastAPI", "Python", "Scikit-Learn", "Render"],
     github: "https://github.com/Jeeya7/Model-Explanation-Dashboard",
-    demo:"https://jeeya7.github.io/Model-Explanation-Dashboard/",
+    demo: "https://jeeya7.github.io/Model-Explanation-Dashboard/",
     demoLabel: "Website",
   },
   {
@@ -39,41 +39,40 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-28 bg-[#fff7fa]">
-      <div className="mx-auto max-w-6xl px-6">
-
+    <section id="projects" className="bg-[#fff7fa] py-20 sm:py-24 lg:py-28">
+      <div className="mx-auto max-w-6xl px-5 sm:px-6">
         {/* Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-3xl font-semibold mb-4">
+        <div className="mb-12 text-center sm:mb-16 lg:mb-20">
+          <h2 className="mb-4 text-2xl font-semibold text-zinc-900 sm:text-3xl">
             Projects
           </h2>
-          <p className="text-zinc-600 max-w-xl mx-auto">
+          <p className="mx-auto max-w-xl text-sm leading-relaxed text-zinc-600 sm:text-base">
             Selected systems and tools I’ve built across machine learning,
             backend engineering, and full-stack development.
           </p>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 border border-black/5 shadow-sm hover:shadow-md transition"
+              className="flex h-full flex-col rounded-2xl border border-black/5 bg-white p-5 shadow-sm transition hover:shadow-md sm:p-6 lg:p-8"
             >
-              <h3 className="text-xl font-semibold mb-4">
+              <h3 className="mb-3 text-lg font-semibold leading-snug text-zinc-900 sm:text-xl">
                 {project.title}
               </h3>
 
-              <p className="text-sm text-zinc-600 mb-6 leading-relaxed">
+              <p className="mb-5 text-sm leading-relaxed text-zinc-600">
                 {project.description}
               </p>
 
               {/* Tech Tags */}
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="mb-5 flex flex-wrap gap-2">
                 {project.tech.map((tech, i) => (
                   <span
                     key={i}
-                    className="text-xs px-3 py-1 bg-[#ec4899]/10 text-[#ec4899] rounded-full"
+                    className="rounded-full bg-[#ec4899]/10 px-3 py-1 text-[11px] text-[#ec4899] sm:text-xs"
                   >
                     {tech}
                   </span>
@@ -81,29 +80,30 @@ export default function Projects() {
               </div>
 
               {/* Links */}
-              <div className="flex gap-4 text-sm">
+              <div className="mt-auto flex flex-wrap gap-x-4 gap-y-2 text-sm">
                 <a
-                  href={project.github} 
-                  className="text-[#ec4899] hover:opacity-70"
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#ec4899] transition hover:opacity-70"
                 >
                   GitHub ↗
                 </a>
 
                 {project.demo && (
                   <a
-                    href={project.demo} 
-                    className="text-[#ec4899] hover:opacity-70"
+                    href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                  >       
+                    className="text-[#ec4899] transition hover:opacity-70"
+                  >
                     {project.demoLabel} ↗
                   </a>
-                )}  
-              </div>            
-          </div>
+                )}
+              </div>
+            </div>
           ))}
         </div>
-
       </div>
     </section>
   );

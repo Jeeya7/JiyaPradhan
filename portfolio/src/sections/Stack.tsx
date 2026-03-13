@@ -1,14 +1,7 @@
-import React from "react";
-
 const stack = [
   {
     category: "Languages",
-    skills: [
-      "Python",
-      "JavaScript (ES6+)",
-      "TypeScript",
-      "SQL (PostgreSQL)",
-    ],
+    skills: ["Python", "JavaScript (ES6+)", "TypeScript", "SQL (PostgreSQL)"],
   },
   {
     category: "ML & AI",
@@ -23,14 +16,7 @@ const stack = [
   },
   {
     category: "Backend",
-    skills: [
-      "FastAPI",
-      "Flask",
-      "PostgreSQL",
-      "Redis",
-      "Docker",
-      "AWS Lambda",
-    ],
+    skills: ["FastAPI", "Flask", "PostgreSQL", "Redis", "Docker", "AWS Lambda"],
   },
   {
     category: "Frontend",
@@ -46,48 +32,47 @@ const stack = [
 
 export default function Stack() {
   return (
-    <section id="stack" className="py-28 bg-[#f4f0f2]">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="stack" className="bg-[#f4f0f2] py-20 sm:py-24 lg:py-28">
+      <div className="mx-auto max-w-6xl px-5 sm:px-6">
 
         {/* Layout Container */}
-        <div className="grid md:grid-cols-5 gap-12">
+        <div className="grid gap-12 md:grid-cols-5">
 
           {/* Left Intro Column */}
           <div className="md:col-span-1">
-            <h2 className="text-4xl font-semibold mb-6">
+            <h2 className="mb-4 text-2xl font-semibold text-zinc-900 sm:text-3xl lg:text-4xl">
               Technical Stack
             </h2>
 
-            <p className="text-zinc-600 leading-relaxed">
+            <p className="text-sm leading-relaxed text-zinc-600 sm:text-base">
               A specialized toolkit focused on the intersection of data science,
               robust backend engineering, and intuitive front-end delivery.
             </p>
           </div>
 
           {/* Skills Columns */}
-          <div className="md:col-span-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:col-span-4 lg:grid-cols-4 lg:gap-10">
             {stack.map((section, index) => (
               <div key={index}>
-                <h3 className="text-lg font-semibold mb-4">
+                <h3 className="mb-3 text-sm font-semibold text-zinc-900 sm:text-base lg:text-lg">
                   {section.category}
                 </h3>
 
-                <ul className="space-y-3">
+                <ul className="space-y-2 sm:space-y-3">
                   {section.skills.map((skill, i) => (
                     <li
                       key={i}
-                      className="flex items-center gap-3 text-sm text-zinc-700"
+                      className="flex items-center gap-2 text-xs text-zinc-700 sm:text-sm"
                     >
-                      <span className="w-2 h-2 bg-[#ec4899] rounded-full" />
+                      <span className="h-2 w-2 rounded-full bg-[#ec4899]" />
                       {skill}
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
-
           </div>
+
         </div>
       </div>
     </section>

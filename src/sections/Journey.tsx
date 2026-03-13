@@ -15,7 +15,7 @@ const experiences = [
       "Docker",
       "Software Systems",
     ],
-    logo: "/CASS_logo.jpg",
+    logo: "${import.meta.env.BASE_URL}CASS_logo.jpg",
   },
   {
     year: "May 2025 – Present",
@@ -25,7 +25,7 @@ const experiences = [
     description:
       "I contributed to transportation and environmental compliance systems, helping debug application issues and improve reporting infrastructure used for regulatory data. I also supported data processing workflows that generate structured outputs for analytics and operational reporting.",
     skills: ["SSRS", "DevOps", "Backend Debugging", "Data Pipelines"],
-    logo: "/ODOT_DEQ_logo.png",
+    logo: "${import.meta.env.BASE_URL}ODOT_DEQ_logo.png",
   },
   {
     year: "Dec 2023 – Present",
@@ -40,7 +40,7 @@ const experiences = [
       "Matplotlib",
       "ML Optimization",
     ],
-    logo: "/OSU_logo.png",
+    logo: "${import.meta.env.BASE_URL}OSU_logo.png",
   },
   {
     year: "Sep 2023 – Jun 2027",
@@ -49,7 +49,7 @@ const experiences = [
     description:
       "I am pursuing a degree in Computer Science with a focus on artificial intelligence, building strong foundations in machine learning, algorithms, and scalable software systems.",
     skills: ["Machine Learning", "AI Systems", "Algorithms", "Deep Learning"],
-    logo: "/OSU_logo.png",
+    logo: "${import.meta.env.BASE_URL}OSU_logo.png",
   },
 ];
 

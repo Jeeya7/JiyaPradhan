@@ -96,7 +96,7 @@ export default function Overview() {
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <div className="h-[240px] w-[240px] overflow-hidden rounded-full sm:h-[300px] sm:w-[300px] lg:h-[380px] lg:w-[380px]">
               <img
-                src="/JiyaPradhan.png"
+                src="${import.meta.env.BASE_URL}JiyaPradhan.png"
                 alt="Jiya Pradhan"
                 className="h-full w-full object-cover"
               />

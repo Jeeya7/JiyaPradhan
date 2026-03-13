@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-[#fff7fa] py-20 sm:py-24 lg:py-28">
+    <section id="contact" className="bg-[#fff7fa] py-20 sm:py-24 lg:py-30">
       <div className="mx-auto max-w-4xl px-5 sm:px-6">
         {/* CTA Card */}
         <div className="rounded-[2rem] bg-[#ec4899] px-5 py-10 text-center text-white sm:rounded-[2.5rem] sm:px-8 sm:py-14 lg:px-10 lg:py-16">

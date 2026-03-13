@@ -6,7 +6,9 @@ const NAV_ITEMS = [
   { id: "journey", label: "Journey" },
   { id: "projects", label: "Projects" },
   { id: "stack", label: "Stack" },
+  { id: "highlights", label: "Highlights"},
   { id: "contact", label: "Contact" },
+
 ];
 
 const NAV_HEIGHT = 72;

@@ -1,9 +1,10 @@
 import "./style/App.css";
-import Overview from "./sections/overview";
+import Overview from "./sections/Overview";
 import Navbar from "./sections/Navbar";
 import Journey from "./sections/Journey";
 import Stack from "./sections/Stack";
 import Projects from "./sections/Projects";
+import Highlights from "./sections/Highlights";
 import Contact from "./sections/Contact";
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
         <Journey />
         <Projects />
         <Stack />
+        <Highlights />
         <Contact />
       </main>
       

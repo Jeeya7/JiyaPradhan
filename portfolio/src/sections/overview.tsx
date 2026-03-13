@@ -8,7 +8,7 @@ export default function Overview() {
         <div className="pointer-events-none absolute left-[70%] top-1/2 -z-10 h-[1200px] w-[1200px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ff2aa3] opacity-60 blur-[260px]" />
 
         {/* CORE POP (smaller + stronger, makes it look “hot”) */}
-        <div className="pointer-events-none absolute left-[70%] top-1/2 -z-10 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ff007f] opacity-95 blur-[90px]" />
+        <div className="pointer-events-none absolute left-[70%] top-1/2 -z-10 h-[620px] w-[620px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ff007f] opacity-95 blur-[120px]" />
 
         {/* DARK WASH so left side stays readable (NOT a vignette) */}
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(11,7,16,0.95)_0%,rgba(11,7,16,0.65)_45%,rgba(11,7,16,0.15)_70%,rgba(11,7,16,0)_100%)]" />
@@ -119,11 +119,11 @@ export default function Overview() {
               </li>
               <li className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-pink-400" />
-                FastAPI
+                Transformers
               </li>
               <li className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-pink-400" />
-                Transformers
+                CUDA
               </li>
             </ul>
           </div>

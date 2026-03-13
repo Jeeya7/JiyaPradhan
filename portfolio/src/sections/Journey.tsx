@@ -5,40 +5,36 @@ const experiences = [
     title: "Software Developer",
     company: "Center for Applied Systems & Software (CASS)",
     description:
-      "Develop backend services for enterprise-level government systems using ASP.NET Core and PostgreSQL. Design RESTful controllers, refactor legacy modules, optimize relational schemas, and resolve production issues to improve system reliability and performance. Implement structured logging with Serilog and analyze backend data to enhance observability and support AI-ready architecture decisions.",
-    skills: ["ASP.NET Core", "PostgreSQL", "C#", "SQL", "Serilog"],
+      "I worked on contract software projects for external partners, helping build and maintain production systems while resolving issues and supporting development across the stack.",
+    skills: ["ASP.NET Core", "Database Management", "C#", "SQL", "Logging", "Python", "Docker", "Software Systems"],
+    logo: "/CASS_logo.jpg",
   },
   {
     year: "May 2025 – Present",
     title: "Systems Contributor — ODOT & OFRS",
     company: "Oregon Department of Transportation & DEQ Oregon Fuels Reporting System",
     description:
-      "Contributed to transportation and environmental compliance systems by supporting DevOps-driven development, debugging frontend and backend malfunctions, and improving reporting infrastructure. Designed and maintained SSRS solutions and integrated Python-based data processing pipelines to generate structured outputs for compliance and internal analytics.",
-    skills: ["SSRS", "Python", "DevOps", "Backend Debugging", "Reporting Systems"],
+      "I contributed to transportation and environmental compliance systems, helping debug application issues and improve reporting infrastructure used for regulatory data. I also supported data processing workflows that generate structured outputs for analytics and operational reporting.",
+    skills: ["SSRS", "DevOps", "Backend Debugging", "Data Pipelines"],
+    logo: "/ODOT_DEQ_logo.png",
   },
   {
     year: "Dec 2023 – Present",
     title: "Undergraduate Research Assistant",
     company: "Oregon State University",
     description:
-      "Assist in machine learning research focused on memory-efficient model optimization. Build and profile PyTorch models, analyze performance bottlenecks, and visualize experimental results using Pandas and Matplotlib. Contribute to bi-weekly research discussions and maintain detailed progress documentation.",
+      "I assist in machine learning research focused on improving the efficiency of neural network models. My work involves building and profiling models, analyzing performance bottlenecks, and visualizing experimental results to support ongoing research and experimentation.",
     skills: ["PyTorch", "Model Profiling", "Pandas", "Matplotlib", "ML Optimization"],
-  },
-  {
-    year: "Mar 2024 – Present",
-    title: "Writing Consultant",
-    company: "Undergrad Research & Writing Studio — Oregon State University",
-    description:
-      "Provide one-on-one non-evaluative writing consultations for students and faculty, helping develop structured strategies for academic and technical writing. Collaborate with peers and staff in weekly reflection sessions and maintain detailed consultation reports.",
-    skills: ["Technical Communication", "Mentorship", "Collaboration", "Documentation"],
+    logo: "/OSU_logo.png",
   },
   {
     year: "Sep 2023 – Jun 2027",
     title: "B.S. Computer Science & Artificial Intelligence",
     company: "Oregon State University",
     description:
-      "Pursuing a 4.0 GPA with focused coursework in Machine Learning, Deep Learning, AI Systems, Algorithms, Database Systems, and Operating Systems. Building strong foundations in AI-driven system design and scalable software engineering.",
-    skills: ["Machine Learning", "AI Systems", "Algorithms", "Database Systems"],
+      "I am pursuing a degree in Computer Science with a focus on artificial intelligence, building strong foundations in machine learning, algorithms, and scalable software systems.",
+    skills: ["Machine Learning", "AI Systems", "Algorithms", "Deep Learning"],
+    logo: "/OSU_logo.png",
   },
 ];
 
@@ -83,32 +79,41 @@ export default function Journey() {
                   <div className="absolute left-1/2 top-6 w-4 h-4 bg-[#ec4899] rounded-full transform -translate-x-1/2 z-10" />
 
                   {/* Card */}
-                  <div className="w-full md:w-[45%] bg-white rounded-2xl p-8 shadow-sm border border-black/5">
-                    <p className="text-xs tracking-widest text-[#ec4899] font-semibold mb-2">
-                      {exp.year}
-                    </p>
+                  <div className="relative w-full md:w-[45%] bg-white rounded-2xl p-8 shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-black/5">
+                    <div className="flex justify-between items-start mb-4">
 
-                    <h3 className="text-lg font-semibold">
-                      {exp.title}
-                    </h3>
+                      <div>
+                        <span className="inline-block text-xs font-semibold text-[#ec4899] bg-[#ec4899]/10 px-3 py-1 rounded-full mb-3">
+                          {exp.year}
+                        </span>
 
-                    <p className="text-sm text-[#ec4899] mb-4">
-                      {exp.company}
-                    </p>
+                        <h3 className="text-xl font-semibold text-zinc-900">
+                          {exp.title}
+                        </h3>
 
-                    <p className="text-sm text-zinc-600 mb-6">
+                        <p className="text-sm text-[#ec4899] font-medium">
+                          {exp.company}
+                        </p>
+                      </div>
+
+                      <img
+                        src={exp.logo}
+                        alt={exp.company}
+                        className="h-20 w-20 object-contain ml-6"
+                      />
+                    </div>
+                    <p className="text-sm text-zinc-600 leading-relaxed mb-6 max-w-lg">
                       {exp.description}
                     </p>
-
                     <div className="flex flex-wrap gap-2">
-                      {exp.skills.map((skill, i) => (
-                        <span
-                          key={i}
-                          className="text-xs px-3 py-1 bg-[#ec4899]/10 text-[#ec4899] rounded-full"
-                        >
-                          {skill}
-                        </span>
-                      ))}
+                        {exp.skills.map((skill, i) => (
+                          <span
+                            key={i}
+                            className="text-xs px-3 py-1 bg-[#ec4899]/10 text-[#ec4899] rounded-full"
+                          >
+                            {skill}
+                          </span>
+                        ))}
                     </div>
                   </div>
                 </div>

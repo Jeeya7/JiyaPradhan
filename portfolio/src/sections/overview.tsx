@@ -13,7 +13,7 @@ export default function Overview() {
         {/* DARK WASH so left side stays readable (NOT a vignette) */}
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(11,7,16,0.95)_0%,rgba(11,7,16,0.65)_45%,rgba(11,7,16,0.15)_70%,rgba(11,7,16,0)_100%)]" />
 
-        <div className="relative mx-auto grid min-h-[82vh] max-w-7xl gap-14 px-6 pb-20 pt-28 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div className="relative mx-auto grid min-h-[82vh] max-w-7xl gap-14 px-8 lg:px-14 xl:px-20 pb-20 pt-28 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div className="space-y-10 text-white">
           <span className="inline-flex rounded-full border border-white/10 bg-black/30 px-6 py-2 text-sm font-semibold shadow-[0_10px_30px_rgba(0,0,0,0.25)]">
             Available for Internships 2026
@@ -25,7 +25,9 @@ export default function Overview() {
             </h1>
 
             <div className="flex items-center gap-3 text-sm text-zinc-300">
-              <span className="opacity-70">LV.00</span>
+              <span className="opacity-70">
+                  LV.  <span className="text-lg">∞</span>
+              </span>
               <span className="h-1 w-1 rounded-full bg-zinc-500/70" />
               <span>ML Engineer</span>
             </div>
@@ -65,7 +67,7 @@ export default function Overview() {
           </div>
         </div>
 
-        <div className="relative mx-auto h-[420px] w-full max-w-[520px]">
+        <div className="group relative mx-auto h-[420px] w-full max-w-[520px]">
           <div className="pointer-events-none absolute left-1/2 top-[42%] h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ec4899] opacity-35 blur-[140px]" />
 
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -78,21 +80,35 @@ export default function Overview() {
             </div>
           </div>
 
-          <div className="absolute right-4 top-14 rounded-2xl bg-white px-4 py-3 text-zinc-900 shadow-[0_18px_40px_rgba(0,0,0,0.22)]">
+          <div className="animate-drift [animation-duration:9s] [animation-delay:-4s] absolute right-4 top-14 rounded-2xl 
+          bg-white/90 backdrop-blur-md 
+          px-4 py-3 text-zinc-900 
+          border border-white/40 
+          ring-1 ring-white/20
+          shadow-[0_25px_60px_rgba(0,0,0,0.25)] 
+          transition-all duration-300 
+          hover:shadow-[0_30px_80px_rgba(236,72,153,0.35)]">
             <p className="text-[11px] font-semibold uppercase tracking-wide text-pink-300">
               GPU TEMP
             </p>
             <p className="text-3xl font-bold leading-none">67&deg;C</p>
           </div>
 
-          <div className="absolute bottom-12 left-4 rounded-2xl bg-white px-4 py-3 text-zinc-900 shadow-[0_18px_40px_rgba(0,0,0,0.22)]">
+          <div className="animate-drift-reverse [animation-duration:10s] [animation-delay:-4s] absolute bottom-12 left-4 rounded-2xl 
+          bg-white/90 backdrop-blur-md 
+          px-4 py-3 text-zinc-900 
+          border border-white/40 
+          ring-1 ring-white/20
+          shadow-[0_25px_60px_rgba(0,0,0,0.25)] 
+          transition-all duration-300 
+          hover:shadow-[0_30px_80px_rgba(236,72,153,0.35)]">
             <p className="text-[11px] font-semibold uppercase tracking-wide text-pink-300">
               UPTIME
             </p>
             <p className="text-3xl font-bold leading-none">99.9%</p>
           </div>
 
-          <div className="absolute bottom-10 right-4 w-[220px] rounded-2xl border border-white/10 bg-black/30 p-4 text-white shadow-[0_22px_60px_rgba(0,0,0,0.35)] backdrop-blur-md">
+          <div className="absolute bottom-0.5 right-4 w-[220px] opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl border border-white/10 bg-black/30 p-4 text-white shadow-[0_22px_60px_rgba(0,0,0,0.35)] backdrop-blur-md">
             <p className="text-xs font-semibold uppercase tracking-wide text-pink-300">
               Current Loadout
             </p>

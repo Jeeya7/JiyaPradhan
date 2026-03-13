@@ -112,7 +112,7 @@ export default function Overview() {
             </pre>
           </div>
 
-          <div className="absolute bottom-2 left-1/2 w-[190px] -translate-x-1/2 rounded-2xl border border-white/10 bg-black/35 p-3 text-white shadow-[0_22px_60px_rgba(0,0,0,0.35)] backdrop-blur-md sm:bottom-0 sm:left-auto sm:right-2 sm:w-[220px] sm:translate-x-0 sm:p-4 lg:right-4 lg:opacity-0 lg:transition-opacity lg:group-hover:opacity-100">
+          <div className="absolute bottom-2 left-1/2 w-[190px] -translate-x-1/2 rounded-2xl border border-white/10 bg-black/35 p-3 text-white shadow-[0_22px_60px_rgba(0,0,0,0.35)] backdrop-blur-md opacity-0 transition-opacity group-hover:opacity-100 sm:bottom-0 sm:left-auto sm:right-2 sm:w-[220px] sm:translate-x-0 sm:p-4 lg:right-4">
             <p className="text-[10px] font-semibold uppercase tracking-wide text-pink-300 sm:text-xs">
               PLAYER STATS
             </p>

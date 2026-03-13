@@ -1,4 +1,20 @@
 export default function Overview() {
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    const NAV_HEIGHT = 72;
+
+    const y =
+      element.getBoundingClientRect().top + window.scrollY - NAV_HEIGHT - 16;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
+  };
+
   return (
       <section
         id="overview"
@@ -15,12 +31,12 @@ export default function Overview() {
 
         <div className="relative mx-auto grid min-h-[82vh] max-w-7xl gap-14 px-8 lg:px-14 xl:px-20 pb-20 pt-28 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div className="space-y-10 text-white">
-          <span className="inline-flex rounded-full border border-white/10 bg-black/30 px-6 py-2 text-sm font-semibold shadow-[0_10px_30px_rgba(0,0,0,0.25)]">
+          <span className="inline-flex rounded-full bg-white/80 backdrop-blur-md px-4 py-1 text-sm font-semibold text-zinc-900 shadow-[0_10px_30px_rgba(0,0,0,0.15)]">            
             Available for Internships 2026
           </span>
 
           <div className="space-y-5">
-            <h1 className="text-6xl font-semibold leading-[1.05] tracking-tight sm:text-7xl">
+            <h1 className="text-6xl font-semibold leading-[1.05] tracking-tight sm:text-7xl drop-shadow-[0_4px_30px_rgba(236,72,153,0.25)]">
               Jiya Pradhan
             </h1>
 
@@ -33,7 +49,7 @@ export default function Overview() {
             </div>
 
             <p className="text-sm font-medium text-pink-300">
-              Current Quest: Scaling Explainable Systems
+              Current Quest: Surviving Junior Year
             </p>
 
             <p className="text-3xl font-medium tracking-tight text-amber-200/90">
@@ -42,28 +58,27 @@ export default function Overview() {
           </div>
 
           <div className="max-w-2xl space-y-5 text-lg leading-relaxed text-white/80">
-            <p>I’m a creative ML builder who loves solving ambitious problems.</p>
-            <p>
-              I turn ideas into custom models, scale them into production systems, and design
-              visual experiences that make intelligence feel clear, human, and exciting.
+            <p>I am curious about how machine learning models make decisions and why they behave the way they do.
+              My work focuses on explainability and building visual tools that make complex models easier for people to understand.
             </p>
-          </div>
+          </div>  
 
           <div className="flex flex-wrap items-center gap-6 pt-2">
-            <a
-              href="#projects"
+            <button
+              onClick={() => scrollToSection("journey")}
               className="group inline-flex items-center gap-3 rounded-xl bg-pink-500 px-10 py-4 text-lg font-semibold text-white shadow-[0_18px_45px_rgba(236,72,153,0.35)] transition hover:bg-pink-400"
             >
-              View Portfolio
+              Experiences
               <span className="translate-x-0 transition group-hover:translate-x-0.5">→</span>
-            </a>
+            </button>
 
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white px-10 py-4 text-lg font-semibold text-zinc-900 shadow-[0_18px_45px_rgba(0,0,0,0.15)] transition hover:bg-white/95"
+            <button
+              onClick={() => scrollToSection("projects")}
+              className="group inline-flex items-center gap-3 justify-center rounded-xl border border-white/15 bg-white px-10 py-4 text-lg font-semibold text-zinc-900 shadow-[0_18px_45px_rgba(0,0,0,0.15)] transition hover:bg-white/95"
             >
-              Download CV
-            </a>
+              Projects
+              <span className="translate-x-0 transition group-hover:translate-x-0.5">→</span>
+            </button>
           </div>
         </div>
 
@@ -80,50 +95,38 @@ export default function Overview() {
             </div>
           </div>
 
-          <div className="animate-drift [animation-duration:9s] [animation-delay:-4s] absolute right-4 top-14 rounded-2xl 
-          bg-white/90 backdrop-blur-md 
-          px-4 py-3 text-zinc-900 
-          border border-white/40 
-          ring-1 ring-white/20
-          shadow-[0_25px_60px_rgba(0,0,0,0.25)] 
-          transition-all duration-300 
-          hover:shadow-[0_30px_80px_rgba(236,72,153,0.35)]">
-            <p className="text-[11px] font-semibold uppercase tracking-wide text-pink-300">
-              GPU TEMP
-            </p>
-            <p className="text-3xl font-bold leading-none">67&deg;C</p>
-          </div>
+          <div className="animate-drift [animation-duration:7s] [animation-delay:-2s] absolute -right-6 top-14 rounded-2xl 
+            bg-white/90 backdrop-blur-md 
+            px-4 py-3 text-zinc-900 
+            border border-white/40 
+            ring-1 ring-white/20
+            shadow-[0_25px_60px_rgba(0,0,0,0.25)] 
+            transition-all duration-300 
+            shadow-[0_30px_80px_rgba(236,72,153,0.35)]">
 
-          <div className="animate-drift-reverse [animation-duration:10s] [animation-delay:-4s] absolute bottom-12 left-4 rounded-2xl 
-          bg-white/90 backdrop-blur-md 
-          px-4 py-3 text-zinc-900 
-          border border-white/40 
-          ring-1 ring-white/20
-          shadow-[0_25px_60px_rgba(0,0,0,0.25)] 
-          transition-all duration-300 
-          hover:shadow-[0_30px_80px_rgba(236,72,153,0.35)]">
-            <p className="text-[11px] font-semibold uppercase tracking-wide text-pink-300">
-              UPTIME
-            </p>
-            <p className="text-3xl font-bold leading-none">99.9%</p>
+            <pre className="text-[11px] leading-relaxed font-mono whitespace-pre-wrap">
+          {`> system_boot
+> status: building things`}
+            </pre>
+
           </div>
 
           <div className="absolute bottom-0.5 right-4 w-[220px] opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl border border-white/10 bg-black/30 p-4 text-white shadow-[0_22px_60px_rgba(0,0,0,0.35)] backdrop-blur-md">
             <p className="text-xs font-semibold uppercase tracking-wide text-pink-300">
-              Current Loadout
+              PLAYER STATS
             </p>
             <ul className="mt-3 space-y-2 text-sm text-white/80">
               <li className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-pink-400" />
-                PyTorch
+                <span>🧠</span>
+                Curiosity: High
               </li>
               <li className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-pink-400" />
-                Transformers
+                <span>🐛 </span>
+                Debugging: Active
               </li>
               <li className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-pink-400" />
-                CUDA
+                <span>📚</span>
+                Learning: Ongoing
               </li>
             </ul>
           </div>

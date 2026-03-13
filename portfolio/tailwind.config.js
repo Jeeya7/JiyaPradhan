@@ -63,7 +63,6 @@ export default {
 
 			animation: {
 			drift: 'drift 10s ease-in-out infinite',
-			'drift-reverse': 'drift 12s ease-in-out infinite reverse',
 			}
 		}
 	},

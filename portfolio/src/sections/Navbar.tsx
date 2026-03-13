@@ -14,6 +14,19 @@ const NAV_HEIGHT = 72;
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("overview");
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    const y =
+      element.getBoundingClientRect().top + window.scrollY - NAV_HEIGHT - 16;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
+  };
+
   useEffect(() => {
     const sections = NAV_ITEMS
       .map((item) => document.getElementById(item.id))
@@ -92,21 +105,21 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Ensure target sections include `scroll-mt-24` (or similar) to offset this fixed navbar on anchor jump. */}
         <div className="flex gap-6 text-sm">
           {NAV_ITEMS.map((item) => {
             const isActive = activeSection === item.id;
             return (
-              <a
+              <button
                 key={item.id}
-                href={`#${item.id}`}
+                type="button"
+                onClick={() => scrollToSection(item.id)}
                 aria-current={isActive ? "page" : undefined}
                 className={`transition-colors hover:text-pink-400 ${
                   isActive ? "text-pink-400" : "text-white/90"
                 }`}
               >
                 {item.label}
-              </a>
+              </button>
             );
           })}
         </div>

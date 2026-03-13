@@ -15,7 +15,7 @@ const highlights = [
     image: `${import.meta.env.BASE_URL}LEAP.jpg`,
     title: "LEAP",
     description:
-      "Leadership, Empowerment, and Purpose (LEAP) graduation ceremoney",
+      "Leadership, Empowerment, and Purpose (LEAP) graduation ceremony",
   },
 ];
 

@@ -119,9 +119,9 @@ export default function Navbar() {
                 type="button"
                 onClick={() => scrollToSection(item.id)}
                 aria-current={isActive ? "page" : undefined}
-                className={`rounded-full px-3 py-1.5 transition-colors sm:px-4 sm:py-2 ${
+                className={`px-3 py-1.5 transition-colors sm:px-4 sm:py-2 ${
                   isActive
-                    ? "bg-white/10 text-pink-400"
+                    ? "text-pink-400"
                     : "text-white/85 hover:text-pink-400"
                 }`}
               >

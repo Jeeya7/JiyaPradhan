@@ -28,7 +28,7 @@ export default function Overview() {
       {/* DARK WASH */}
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(11,7,16,0.92)_0%,rgba(11,7,16,0.80)_38%,rgba(11,7,16,0.45)_68%,rgba(11,7,16,0.15)_100%)] lg:bg-[linear-gradient(90deg,rgba(11,7,16,0.95)_0%,rgba(11,7,16,0.65)_45%,rgba(11,7,16,0.15)_70%,rgba(11,7,16,0)_100%)]" />
 
-      <div className="relative mx-auto grid min-h-[100svh] max-w-7xl gap-12 px-5 pb-16 pt-24 sm:px-6 sm:pb-20 sm:pt-28 lg:min-h-[82vh] lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-14 lg:px-14 xl:px-20">
+      <div className="relative mx-auto grid min-h-[100svh] max-w-7xl gap-12 px-5 pb-16 pt-36 sm:px-6 sm:pb-20 sm:pt-28 lg:min-h-[82vh] lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-14 lg:px-14 xl:px-20">
         {/* LEFT */}
         <div className="space-y-8 text-white sm:space-y-10">
           <span className="inline-flex rounded-full bg-white/80 px-3 py-1 text-xs font-semibold text-zinc-900 shadow-[0_10px_30px_rgba(0,0,0,0.15)] backdrop-blur-md sm:px-4 sm:text-sm">

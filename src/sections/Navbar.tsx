@@ -111,7 +111,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="-mx-1 flex items-center gap-1 overflow-x-auto whitespace-nowrap px-1 text-xs scrollbar-none sm:gap-2 sm:text-sm lg:mx-0 lg:justify-end lg:overflow-visible lg:px-0">
+        <div className="flex flex-wrap items-center justify-center gap-1 px-1 text-xs sm:gap-2 sm:text-sm lg:justify-end lg:px-0">
           {NAV_ITEMS.map((item) => {
             const isActive = activeSection === item.id;
 
